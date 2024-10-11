@@ -14,15 +14,19 @@
     </dependencies>
 
     <!-- Build section where plugins are configured -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version> <!-- Update to the latest version -->
-            </plugin>
-        </plugins>
-    </build>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml> <!-- Skip the requirement of web.xml -->
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
 </project>
 
 
